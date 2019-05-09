@@ -12,7 +12,7 @@ namespace ExamenAmarillo {
 
         public string Nombre { get { return nombre; } }
         public string Dni { get { return dni; } }
-        public double Saldo { get { return saldo; } }
+        public static double Saldo { get { return saldo; } set { saldo = value; } }
 
         public Cliente(string nombre, string dni, double saldo) {
             this.nombre = nombre;
@@ -24,6 +24,20 @@ namespace ExamenAmarillo {
 
         }
 
+		public static void SumaSaldo(double s)
+		{
+			Saldo += s;
+		}
 
+		public static void RestaSaldo(double s)
+		{
+			Saldo -= s;
+		}
+
+		public static string PositivoNegativo(double s)
+		{
+			if (s >= 0) return "Positivo";
+			else return "Negativo";
+		}
     }
 }
