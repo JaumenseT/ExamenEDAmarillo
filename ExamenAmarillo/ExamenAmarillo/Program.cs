@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace ExamenAmarillo {
     class Program {
         static void Main(string[] args) {
+            Cliente cliente = new Cliente();
         }
     }
 }

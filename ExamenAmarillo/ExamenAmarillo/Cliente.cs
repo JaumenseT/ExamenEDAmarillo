@@ -5,19 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ExamenAmarillo {
-    class Cliente {
+    public class Cliente {
         private string nombre;
         private string dni;
-        private double saldo = 100;
+        private static double saldo = 100;
 
         public string Nombre { get { return nombre; } }
         public string Dni { get { return dni; } }
-        public static double Saldo { get { return saldo; } set { saldo = value; } }
+        public double Saldo { get { return saldo; } set { saldo = value; } }
 
-        public Cliente(string nombre, string dni, double saldo) {
+        public Cliente(string nombre, string dni) {
             this.nombre = nombre;
             this.dni = dni;
-            this.saldo = saldo;
         }
 
         public Cliente() {
@@ -26,12 +25,12 @@ namespace ExamenAmarillo {
 
 		public static void SumaSaldo(double s)
 		{
-			Saldo += s;
+			saldo += s;
 		}
 
 		public static void RestaSaldo(double s)
 		{
-			Saldo -= s;
+			saldo -= s;
 		}
 
 		public static string PositivoNegativo(double s)
