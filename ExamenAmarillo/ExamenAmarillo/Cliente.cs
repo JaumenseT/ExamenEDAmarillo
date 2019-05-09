@@ -8,11 +8,11 @@ namespace ExamenAmarillo {
     public class Cliente {
         private string nombre;
         private string dni;
-        private static double saldo = 100;
+        private static int saldo = 100;
 
         public string Nombre { get { return nombre; } }
         public string Dni { get { return dni; } }
-        public double Saldo { get { return saldo; } set { saldo = value; } }
+        public int Saldo { get { return saldo; } set { saldo = value; } }
 
         public Cliente(string nombre, string dni) {
             this.nombre = nombre;
@@ -23,14 +23,16 @@ namespace ExamenAmarillo {
 
         }
 
-		public static void SumaSaldo(double s)
+		public static int SumaSaldo(int s)
 		{
-			saldo += s;
+		    saldo += s;
+            return saldo;
 		}
 
-		public static void RestaSaldo(double s)
+		public static int RestaSaldo(int s)
 		{
 			saldo -= s;
+            return saldo;
 		}
 
 		public static string PositivoNegativo(double s)
